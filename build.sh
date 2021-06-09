@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
 
 ctainer=$(buildah from docker.io/nipreps/fmriprep:latest)
 buildah run "$ctainer" -- touch /test
