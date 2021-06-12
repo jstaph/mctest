@@ -19,7 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "${{ gihub.ref }}"
+          tag_name: "${{ github.ref }}"
           release_name: "Release ${{ gihub.ref }}${{ github.sha }}"
           body: |
             Changes in this Release
