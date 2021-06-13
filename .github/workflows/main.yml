@@ -35,9 +35,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./path/to/asset.zip
-          asset_name: asset.zip
-          asset_content_type: application/zip
+          asset_name: "test-${{ github.sha }}.tar"
+          asset_path: "${{ github.workspace }}/test.tar"
+          asset_content_type: application/x-tar
       - name: Publish release
         uses: StuYarrow/publish-release@v1
         env:
